@@ -1,15 +1,34 @@
 {
   "name": "fish",
   "version": "0.1.0",
+  "main": "server.js",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "server": "nodemon server.js",
+    "drok": "concurrently \"npm run server\" \"npm run dev\"",
+    "debug": "DEBUG=express:*"
   },
+  "proxy": "http://localhost:4000",
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.0",
     "next": "9.4.4",
+    "node": "^12.13.0",
+    "node-sass": "^4.14.1",
+    "nodemon": "^2.0.4",
     "react": "16.13.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "heroku": "^7.42.5",
+    "heroku-cli": "^7.0.9"
   }
 }
