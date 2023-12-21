@@ -31,39 +31,3 @@ nextApp.prepare().then(() => {
         res.send()
     })
 })
-
-
-//const server = http.createServer(app);
-
-// const transporter = nodemailer.createTransport(sendgrid({
-//         auth: {
-//             api_key: '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'
-//         }
-// }))
-
-// const io = socketio(server);
-
-// app.get('/', (req, res) => {
-//     res.send('API running');
-// })
-
-// io
-//     .of('/contacts')
-//     .on('connection', function (socket) {
-//     console.log('New WS connection...')
-//     socket.on('email', async (data) => {
-//         console.log(data)
-//         try {
-// 			await transporter.sendMail(mail(data))
-// 		} catch (e) {
-// 			console.log(e)
-// 		}
-//     })
-//     socket.on('disconnect', () => {
-// 		console.log('User has left')
-// 	})
-// })
-
-// const PORT = 6000 || process.env.PORT;
-
-// server.listen(PORT, console.log(`Server have started at ${PORT} port`));
